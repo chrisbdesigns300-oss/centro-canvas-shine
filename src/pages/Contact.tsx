@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -148,6 +148,25 @@ const Contact = () => {
                       Queen Creek, Arizona<br />
                       and surrounding areas
                     </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full">
+                    <Instagram className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-montserrat font-semibold text-primary mb-1">
+                      Follow Us
+                    </h3>
+                    <a
+                      href="https://www.instagram.com/centropainting/?fbclid=IwY2xjawNmXbBleHRuA2FlbQIxMABicmlkETEyRmw4QTBJVVlCU3lwUnZDAR4AsLt5A0Et-dPQ-regK6sQMEZCsnJdExBr_OPoIdBdZzFG_efNII-HCSHSkg_aem_h5tAm8H0bOjb62l_HRB59Q"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      @centropainting
+                    </a>
                   </div>
                 </div>
               </div>

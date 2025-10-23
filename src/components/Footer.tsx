@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, PaintBucket } from "lucide-react";
+import { Mail, MapPin, Phone, PaintBucket, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -82,6 +82,17 @@ const Footer = () => {
                 <span className="text-white/80 text-sm">
                   Queen Creek, Arizona
                 </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Instagram className="h-5 w-5 text-white/80 mt-0.5 flex-shrink-0" />
+                <a 
+                  href="https://www.instagram.com/centropainting/?fbclid=IwY2xjawNmXbBleHRuA2FlbQIxMABicmlkETEyRmw4QTBJVVlCU3lwUnZDAR4AsLt5A0Et-dPQ-regK6sQMEZCsnJdExBr_OPoIdBdZzFG_efNII-HCSHSkg_aem_h5tAm8H0bOjb62l_HRB59Q" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-white transition-colors text-sm"
+                >
+                  @centropainting
+                </a>
               </li>
             </ul>
           </div>

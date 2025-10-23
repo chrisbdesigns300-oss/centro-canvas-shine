@@ -2,38 +2,43 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import portfolio1 from "@/assets/portfolio-1.png";
+import portfolio2 from "@/assets/portfolio-2.png";
+import portfolio3 from "@/assets/portfolio-3.png";
+import portfolio4 from "@/assets/portfolio-4.png";
+import portfolio5 from "@/assets/portfolio-5.png";
 
 const Portfolio = () => {
   const projects = [
     {
-      title: "Modern Living Room Transformation",
-      category: "Residential Interior",
-      description: "Complete interior repaint with accent wall feature",
-    },
-    {
-      title: "Exterior Home Refresh",
+      title: "Southwestern Style Home Exterior",
       category: "Residential Exterior",
-      description: "Full exterior painting with weather-resistant coating",
+      description: "Complete exterior transformation with warm earth tones and modern stucco finish, featuring custom garage door painting and architectural detail enhancement",
+      image: portfolio1,
     },
     {
-      title: "Office Space Renovation",
-      category: "Commercial Interior",
-      description: "Professional office painting with custom color scheme",
-    },
-    {
-      title: "Retail Store Front",
-      category: "Commercial Exterior",
-      description: "Eye-catching storefront transformation",
-    },
-    {
-      title: "Kitchen Cabinet Refinishing",
-      category: "Specialty",
-      description: "Custom cabinet painting for modern kitchen update",
-    },
-    {
-      title: "Historic Home Restoration",
+      title: "Contemporary Garage Door Refinish",
       category: "Residential Exterior",
-      description: "Careful restoration maintaining original character",
+      description: "Premium garage door painting with sophisticated slate blue finish, perfectly complementing modern home architecture and landscaping",
+      image: portfolio2,
+    },
+    {
+      title: "Full Exterior Wall Renovation",
+      category: "Residential Exterior",
+      description: "Expert stucco painting with weather-resistant coating, providing long-lasting protection and a fresh, clean appearance to home exteriors",
+      image: portfolio3,
+    },
+    {
+      title: "Desert Home Exterior Refresh",
+      category: "Residential Exterior",
+      description: "Complete home exterior painting with UV-resistant paint, designed to withstand Arizona's harsh climate while maintaining curb appeal",
+      image: portfolio4,
+    },
+    {
+      title: "Modern Residential Transformation",
+      category: "Residential Exterior",
+      description: "Comprehensive exterior painting with neutral earth tones, enhancing property value and creating a welcoming first impression",
+      image: portfolio5,
     },
   ];
 
@@ -62,12 +67,19 @@ const Portfolio = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="bg-muted rounded-xl overflow-hidden hover-scale cursor-pointer shadow-lg group"
+                className="bg-muted rounded-xl overflow-hidden hover-scale cursor-pointer shadow-lg group relative"
               >
-                <div className="h-64 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                  <p className="text-muted-foreground text-sm px-4 text-center">
-                    Project photos coming soon
-                  </p>
+                <div className="h-64 relative overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6">
+                    <p className="text-white text-sm text-center leading-relaxed">
+                      {project.description}
+                    </p>
+                  </div>
                 </div>
                 <div className="p-6">
                   <span className="text-sm text-accent font-semibold">
@@ -76,9 +88,6 @@ const Portfolio = () => {
                   <h3 className="text-xl font-montserrat font-bold text-primary mt-2 mb-3">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {project.description}
-                  </p>
                 </div>
               </div>
             ))}
