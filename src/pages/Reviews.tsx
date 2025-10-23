@@ -96,7 +96,7 @@ const Reviews = () => {
             We'd love to hear from you! Share your experience and help others find quality painting services.
           </p>
           <a
-            href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK/review"
+            href="https://www.google.com/maps/place/Centro+Painting/@33.240396,-111.6769283,17z/data=!4m18!1m9!4m8!1m0!1m6!1m2!1s0xa3f54dd1d2bd6fb5:0x19fb6f1444292ac4!2s18927+E+Vía+Del+Verde,+Queen+Creek,+AZ+85142!2m2!1d-111.674348!2d33.240396!3m7!1s0xa3f54dd1d2bd6fb5:0x19fb6f1444292ac4!8m2!3d33.240396!4d-111.674348!9m1!1b1!16s%2Fg%2F11vyj4551s?entry=ttu&g_ep=EgoyMDI1MTAyMC4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
           >
