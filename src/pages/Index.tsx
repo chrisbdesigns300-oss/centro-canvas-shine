@@ -36,7 +36,7 @@ const Index = () => {
         
         <div className="relative z-10 container mx-auto px-4 md:px-6 text-center">
           <h1
-            className={`text-5xl md:text-7xl font-montserrat font-bold text-white mb-6 animate-underline ${
+            className={`text-5xl md:text-7xl font-montserrat font-bold text-primary mb-6 animate-underline ${
               activeElements.includes("hero-title") ? "active" : ""
             } text-shadow`}
           >
