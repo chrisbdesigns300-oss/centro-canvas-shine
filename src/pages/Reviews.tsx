@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Star } from "lucide-react";
 import reviewImage from "@/assets/review-jonathan.png";
 
 const Reviews = () => {
@@ -44,17 +45,47 @@ const Reviews = () => {
                 key={index}
                 className="bg-muted p-8 rounded-xl shadow-lg hover-scale mb-8"
               >
+                <div className="flex items-center gap-4 mb-4">
+                  <div>
+                    <h3 className="text-xl font-montserrat font-bold text-primary">
+                      {review.name}
+                    </h3>
+                    <div className="flex gap-1 my-2">
+                      {[...Array(review.rating)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className="w-5 h-5 fill-yellow-400 text-yellow-400"
+                        />
+                      ))}
+                    </div>
+                    <p className="text-sm text-muted-foreground">{review.date}</p>
+                  </div>
+                </div>
+                <p className="text-lg text-foreground mb-4">{review.text}</p>
                 <img 
                   src={review.image} 
-                  alt={`${review.name}'s review`}
-                  className="w-full rounded-lg mb-4"
+                  alt={`${review.name}'s review screenshot`}
+                  className="w-full rounded-lg"
                 />
               </div>
             ))}
             <div className="text-center mt-8">
-              <p className="text-2xl font-montserrat font-semibold text-primary">
+              <p className="text-2xl font-montserrat font-semibold text-primary mb-6">
                 More to come!
               </p>
+              <a
+                href="https://www.google.com/maps/place/Centro+Painting/@33.240396,-111.6769283,17z/data=!4m18!1m9!4m8!1m0!1m6!1m2!1s0xa3f54dd1d2bd6fb5:0x19fb6f1444292ac4!2s18927+E+Vía+Del+Verde,+Queen+Creek,+AZ+85142!2m2!1d-111.674348!2d33.240396!3m7!1s0xa3f54dd1d2bd6fb5:0x19fb6f1444292ac4!8m2!3d33.240396!4d-111.674348!9m1!1b1!16s%2Fg%2F11vyj4551s?entry=ttu&g_ep=EgoyMDI1MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="font-montserrat font-semibold hover-scale"
+                >
+                  View All Reviews on Google Maps
+                </Button>
+              </a>
             </div>
           </div>
         </div>
