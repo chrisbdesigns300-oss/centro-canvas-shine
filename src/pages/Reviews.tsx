@@ -2,16 +2,14 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
-import reviewImage from "@/assets/review-jonathan.png";
 
 const Reviews = () => {
   const reviews = [
     {
       name: "Jonathan Garcia",
       rating: 5,
-      text: "Great service and great work",
+      text: "Great service and great work!",
       date: "2 months ago",
-      image: reviewImage,
     },
   ];
 
@@ -61,12 +59,7 @@ const Reviews = () => {
                     <p className="text-sm text-muted-foreground">{review.date}</p>
                   </div>
                 </div>
-                <p className="text-lg text-foreground mb-4">{review.text}</p>
-                <img 
-                  src={review.image} 
-                  alt={`${review.name}'s review screenshot`}
-                  className="w-full rounded-lg"
-                />
+                <p className="text-lg text-foreground">{review.text}</p>
               </div>
             ))}
             <div className="text-center mt-8">
